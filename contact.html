@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Farès Mazouz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">À propos</a></li>
+                <li><a href="experience.html">Expérience</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Farès Mazouz</h1>
+        <p>Aspirant en Cybersécurité</p>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="contact.php" method="POST">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Farès Mazouz. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

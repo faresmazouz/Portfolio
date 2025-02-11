@@ -46,8 +46,8 @@ scrollTopButton.addEventListener("click", () => {
 });
 
 // Message d'alerte pour le formulaire
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Merci pour votre message, Farès vous répondra bientôt !');
-});
+//document.querySelector('form').addEventListener('submit', function(event) {
+//    event.preventDefault();
+//    alert('Merci pour votre message, Farès vous répondra bientôt !');
+//});
 

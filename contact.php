@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($name) && !empty($email) && !empty($message)) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Destinataire de l'email
-            $to = "faresmzz15@gmail.com"; // Remplacez par votre adresse email
+            $to = "faresmzz15@gmail.com"; 
             $subject = "Nouveau message de votre portfolio";
             $body = "Nom: $name\nEmail: $email\nMessage:\n$message";
             $headers = "From: $email";

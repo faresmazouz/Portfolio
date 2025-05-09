@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Farès Mazouz</title>
+    <title>Farès Mazouz - Contact</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">À propos</a></li>
-                <li><a href="experience.html">Expérience</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Farès Mazouz</h1>
-        <p>Aspirant en Cybersécurité</p>
+        <div class="header-content">
+            <h1>Farès Mazouz</h1>
+            <p>Aspirant en Cybersécurité</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">À propos</a></li>
+                    <li><a href="experience.html">Expérience</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Changer de thème">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon" style="display: none;"></i>
+            </button>
+        </div>
     </header>
-
     <main>
-        <section id="contact">
+        <section>
             <h2>Contact</h2>
-            <form action="contact.php" method="POST">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
-
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
                 <button type="submit">Envoyer</button>
             </form>
         </section>
     </main>
-
     <footer>
         <p>© 2025 Farès Mazouz. Tous droits réservés.</p>
     </footer>
+    <script src="theme.js"></script>
 </body>
 </html>

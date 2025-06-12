@@ -45,9 +45,13 @@ scrollTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Message d'alerte pour le formulaire
-//document.querySelector('form').addEventListener('submit', function(event) {
-//    event.preventDefault();
-//    alert('Merci pour votre message, Farès vous répondra bientôt !');
-//});
+// Animation des barres de progression sur la page Compétences
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+        const value = bar.getAttribute('data-value');
+        if (value) {
+            bar.style.width = value + '%';
+        }
+    });
+});
 

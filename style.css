@@ -465,3 +465,55 @@ footer {
         right: 0.8rem;
     }
 }
+
+/* Bouton retour en haut */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--darker);
+    border: none;
+    display: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+.scroll-top:hover {
+    background: var(--primary-dark);
+}
+
+/* Styles pour la page Compétences */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    width: 100%;
+    background: var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--gradient);
+    width: 0;
+    transition: width 1s ease;
+}

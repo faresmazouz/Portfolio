@@ -13,10 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: formData
             });
             const text = await response.text();
-            messageDiv.textContent = text.trim();
+            const message = text.trim();
+            messageDiv.textContent = message;
+            alert(message);
             form.reset();
         } catch (err) {
-            messageDiv.textContent = "Erreur lors de l'envoi du message.";
+            const errorMsg = "Erreur lors de l'envoi du message.";
+            messageDiv.textContent = errorMsg;
+            alert(errorMsg);
         }
     });
 });

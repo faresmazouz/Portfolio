@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farès Mazouz - À propos</title>
+    <title>Portfolio BUT1A</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <figure class="profile-frame">
-        <img src="assets/images/photofares.jpg" alt="Farès Mazouz">
-        <figcaption>Nom Prénom : Farès Mazouz | Âge : 19 ans | Lieu d'étude : BUT Informatique Aubière</figcaption>
-    </figure>
-
     <header>
         <div class="header-content">
             <h1>Farès Mazouz</h1>
             <p>Aspirant en Cybersécurité</p>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">À propos</a></li>
-                    <li><a href="experience.html">Expérience</a></li>
-                    <li><a href="projets.html">Projets</a></li>
-                    <li><a href="hobbies.html">Hobbies</a></li>
-                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="#about" class="active">À propos</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#realisations">Réalisations techniques</a></li>
+                    <li><a href="#projet">Projet personnel</a></li>
+                    <li><a href="#interets">Centres d’intérêt</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -34,20 +28,73 @@
             </button>
         </div>
     </header>
+
     <figure class="profile-frame">
         <img src="assets/images/photofares.jpg" alt="Farès Mazouz">
         <figcaption>Nom Prénom : Farès Mazouz | Âge : 19 ans | Lieu d'étude : BUT Informatique Aubière</figcaption>
     </figure>
+
     <main>
-        <section>
-            <h2>À propos</h2>
-            <p>Bonjour, je m'appelle Farès Mazouz. Je suis passionné par la cybersécurité et je souhaite approfondir mes compétences dans ce domaine. Mon objectif est de devenir un expert en sécurité informatique.</p>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Courte présentation personnelle à compléter.</p>
+        </section>
+
+        <section id="cv">
+            <h2>CV</h2>
+            <a href="assets/cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+        </section>
+
+        <section id="realisations">
+            <h2>Réalisations techniques de l’année en cours</h2>
+            <div class="project">
+                <h3>SAÉ Exemple</h3>
+                <p>Résumé du projet sur une dizaine de lignes maximum décrivant les objectifs et les résultats obtenus, notamment la mise en oeuvre des compétences C1 et C6.</p>
+                <div class="project-images">
+                    <img src="https://via.placeholder.com/300x200?text=Illustration+1" alt="Illustration 1">
+                    <img src="https://via.placeholder.com/300x200?text=Illustration+2" alt="Illustration 2">
+                </div>
+                <ul>
+                    <li>C1 : développement d’application</li>
+                    <li>C6 : travail en équipe</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>SAÉ Exemple 2</h3>
+                <p>Deuxième projet illustrant des compétences supplémentaires telles que C3 et C4, résumé en quelques lignes pour présenter le contexte et les résultats.</p>
+                <div class="project-images">
+                    <img src="https://via.placeholder.com/300x200?text=Illustration+2" alt="Illustration A">
+                    <img src="https://via.placeholder.com/300x200?text=Illustration+3" alt="Illustration B">
+                </div>
+                <ul>
+                    <li>C3 : administration des systèmes</li>
+                    <li>C4 : gestion des données</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projet">
+            <h2>Projet personnel</h2>
+            <p>Description sur cinq à dix lignes de ce projet personnel. Quelques images peuvent illustrer l’avancement.</p>
+            <div class="project-images">
+                <img src="https://via.placeholder.com/300x200?text=Illustration+2" alt="Projet personnel 1">
+                <img src="https://via.placeholder.com/300x200?text=Illustration+3" alt="Projet personnel 2">
+            </div>
+        </section>
+
+        <section id="interets">
+            <h2>Centres d’intérêt et autres éléments personnels</h2>
+            <p>Jobs, hobbies, engagements et tout autre élément que je souhaite mettre en avant.</p>
         </section>
     </main>
+
     <button id="scrollTopButton" class="scroll-top" aria-label="Retour en haut">↑</button>
+
     <footer>
         <p>© 2025 Farès Mazouz. Tous droits réservés.</p>
     </footer>
+
     <script src="script.js"></script>
     <script src="theme.js"></script>
 </body>

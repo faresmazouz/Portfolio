@@ -254,6 +254,20 @@ section p {
     box-shadow: var(--shadow-lg);
 }
 
+/* Groupe d'images dans les projets */
+.project-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+}
+
 /* Formulaire moderne */
 .form-group {
     margin-bottom: 1.5rem;
@@ -314,6 +328,22 @@ button {
     margin: 2rem auto 0;
     min-width: 250px;
     box-shadow: var(--shadow);
+}
+
+.download-btn {
+    background: var(--gradient);
+    color: var(--darker);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-lg);
 }
 
 button:hover {

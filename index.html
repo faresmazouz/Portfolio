@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farès Mazouz - À propos</title>
+    <title>Portfolio BUT1A</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <figure class="profile-frame">
-        <img src="assets/images/photofares.jpg" alt="Farès Mazouz">
-        <figcaption>Nom Prénom : Farès Mazouz | Âge : 19 ans | Lieu d'étude : BUT Informatique Aubière</figcaption>
-    </figure>
-
     <header>
         <div class="header-content">
             <h1>Farès Mazouz</h1>
             <p>Aspirant en Cybersécurité</p>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">À propos</a></li>
-                    <li><a href="experience.html">Expérience</a></li>
-                    <li><a href="projets.html">Projets</a></li>
-                    <li><a href="hobbies.html">Hobbies</a></li>
-                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="#about" class="active">À propos</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#realisations">Réalisations techniques</a></li>
+                    <li><a href="#projet">Projet personnel</a></li>
+                    <li><a href="#interets">Centres d’intérêt</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -34,20 +28,74 @@
             </button>
         </div>
     </header>
+
     <figure class="profile-frame">
         <img src="assets/images/photofares.jpg" alt="Farès Mazouz">
         <figcaption>Nom Prénom : Farès Mazouz | Âge : 19 ans | Lieu d'étude : BUT Informatique Aubière</figcaption>
     </figure>
+
     <main>
-        <section>
-            <h2>À propos</h2>
-            <p>Bonjour, je m'appelle Farès Mazouz. Je suis passionné par la cybersécurité et je souhaite approfondir mes compétences dans ce domaine. Mon objectif est de devenir un expert en sécurité informatique.</p>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Je m'appelle Farès Mazouz, étudiant en première année de BUT Informatique. Curieux, rigoureux et passionné par les nouvelles technologies, j’ai choisi cette formation pour acquérir des compétences solides en développement, en réseaux et en gestion de données. J’aime relever des défis techniques et apprendre en pratiquant, que ce soit à travers les projets réalisés en cours ou des initiatives personnelles.</p>
+            <p>À terme, je souhaite me spécialiser en cybersécurité ou en développement logiciel, avec l’ambition de travailler dans un environnement stimulant, pourquoi pas dans le secteur du luxe ou de l’innovation. Mon esprit d’équipe, ma persévérance et ma soif d’apprendre sont mes principaux moteurs au quotidien.</p>
+        </section>
+
+        <section id="cv">
+            <h2>CV</h2>
+            <a href="assets/cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+        </section>
+
+        <section id="realisations">
+            <h2>Réalisations techniques de l’année en cours</h2>
+            <div class="project">
+                <h3>L'hexapawn</h3>
+                <p>Ce projet consistait à développer une intelligence artificielle capable de jouer au jeu d’échecs simplifié Hexapawn. Réalisé en équipe, il m’a permis de mettre en pratique la conduite de projet tout en renforçant mes compétences en développement.</p>
+                <div class="project-images">
+                    <img src="assets/images/hexapawn.jpg" alt="Plateau de jeu Hexapawn">
+                </div>
+                <ul>
+                    <li>C1 : développement d’application</li>
+                    <li>C5 : conduite de projet</li>
+                    <li>C6 : travail en équipe</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>Recueil de besoin pour Wiremap</h3>
+                <p>Rédaction du cahier des charges de l’outil Wiremap destiné à cartographier les réseaux informatiques. Cette étude a impliqué l’analyse des attentes du client, la définition des fonctionnalités clés et la préparation de maquettes.</p>
+                <div class="project-images">
+                    <img src="assets/images/wiremap.jpg" alt="Schéma Wiremap">
+                </div>
+                <ul>
+                    <li>C4 : gestion des données</li>
+                    <li>C5 : conduite de projet</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projet">
+            <h2>Projet personnel</h2>
+            <p>Description sur cinq à dix lignes de ce projet personnel. Quelques images peuvent illustrer l’avancement.</p>
+            <div class="project-images">
+                <img src="https://via.placeholder.com/300x200?text=Illustration+2" alt="Projet personnel 1">
+                <img src="https://via.placeholder.com/300x200?text=Illustration+3" alt="Projet personnel 2">
+            </div>
+        </section>
+
+        <section id="interets">
+            <h2>Centres d’intérêt et autres éléments personnels</h2>
+            <p>En dehors de mes études, je m’intéresse beaucoup à la cybersécurité, aux CTF (Capture The Flag), et aux outils de pentest que je découvre via des plateformes comme TryHackMe ou Hack The Box.</p>
+            <p>Je suis également passionné par le sport (musculation, boxe) et par la mode, en particulier les marques de luxe. J’aime apprendre en autodidacte, que ce soit pour améliorer mes compétences techniques ou personnelles.</p>
         </section>
     </main>
+
     <button id="scrollTopButton" class="scroll-top" aria-label="Retour en haut">↑</button>
+
     <footer>
         <p>© 2025 Farès Mazouz. Tous droits réservés.</p>
     </footer>
+
     <script src="script.js"></script>
     <script src="theme.js"></script>
 </body>

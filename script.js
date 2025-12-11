@@ -19,31 +19,31 @@ const projects = [
 
 // Ajout dynamique des projets
 const projectsContainer = document.getElementById("projects-container");
-projects.forEach(project => {
-    const projectDiv = document.createElement("div");
-    projectDiv.classList.add("project");
-    projectDiv.innerHTML = `
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <a href="${project.link}" target="_blank">Voir le projet</a>
-    `;
-    projectsContainer.appendChild(projectDiv);
-});
+if (projectsContainer) {
+    projects.forEach(project => {
+        const projectDiv = document.createElement("div");
+        projectDiv.classList.add("project");
+        projectDiv.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <a href="${project.link}" target="_blank" rel="noopener">Voir le projet</a>
+        `;
+        projectsContainer.appendChild(projectDiv);
+    });
+}
 
 // Bouton "Retour en haut"
 const scrollTopButton = document.getElementById("scrollTopButton");
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-        scrollTopButton.style.display = "block";
-    } else {
-        scrollTopButton.style.display = "none";
-    }
-});
+if (scrollTopButton) {
+    window.addEventListener("scroll", () => {
+        scrollTopButton.style.display = window.scrollY > 200 ? "block" : "none";
+    });
 
-// Action du bouton "Retour en haut"
-scrollTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
+    // Action du bouton "Retour en haut"
+    scrollTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
 
 // Animation des barres de progression sur la page Compétences
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,4 +54,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-

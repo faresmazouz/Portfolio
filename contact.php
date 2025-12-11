@@ -1,35 +1,83 @@
 <?php
-// Vérifiez si le formulaire a été soumis
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+declare(strict_types=1);
 
-    // Validation des champs
-    if (!empty($name) && !empty($email) && !empty($message)) {
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Destinataire de l'email
-            $to = "faresmzz15@gmail.com"; 
-            $subject = "Nouveau message de votre portfolio";
-            $body = "Nom: $name\nEmail: $email\nMessage:\n$message";
-            $headers = "From: $email";
+header('Content-Type: application/json; charset=utf-8');
 
-            // Envoi de l'email
-            if (mail($to, $subject, $body, $headers)) {
-                echo "Message envoyé avec succès. Merci de nous avoir contacté !";
-            } else {
-                echo "Une erreur est survenue. Veuillez réessayer plus tard.";
-            }
-        } else {
-            echo "Adresse email invalide.";
-        }
-    } else {
-        echo "Tous les champs sont requis.";
-    }
-} else {
-    echo "Requête non valide.";
+/**
+ * Envoie une réponse JSON standardisée et termine le script.
+ */
+function respond(bool $success, string $message, int $statusCode = 200, array $extra = []): void
+{
+    http_response_code($statusCode);
+    echo json_encode(
+        array_merge(['success' => $success, 'message' => $message], $extra),
+        JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+    );
+    exit;
 }
-?>
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    respond(false, 'Requête non valide.', 405);
+}
+
+$name = trim((string) ($_POST['name'] ?? ''));
+$email = trim((string) ($_POST['email'] ?? ''));
+$message = trim((string) ($_POST['message'] ?? ''));
+
+if ($name === '' || $email === '' || $message === '') {
+    respond(false, 'Tous les champs sont requis.', 422);
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    respond(false, 'Adresse email invalide.', 422);
+}
+
+$portfolioEmail = 'faresmzz15@gmail.com';
+$subject = 'Nouveau message depuis le portfolio';
+$body = sprintf(
+    "Nom : %s\nEmail : %s\nDate : %s\n\nMessage :\n%s\n",
+    $name,
+    $email,
+    (new DateTimeImmutable('now', new DateTimeZone('Europe/Paris')))->format(DateTimeInterface::RFC2822),
+    $message
+);
+
+$headers = [
+    'From' => 'Portfolio <no-reply@portfolio.local>',
+    'Reply-To' => sprintf('%s <%s>', $name, $email),
+    'Content-Type' => 'text/plain; charset=utf-8'
+];
+
+$formattedHeaders = '';
+foreach ($headers as $key => $value) {
+    $formattedHeaders .= $key . ': ' . $value . "\r\n";
+}
+
+$logDir = __DIR__ . '/data';
+$logFile = $logDir . '/messages.log';
+
+if (!is_dir($logDir) && !mkdir($logDir, 0775, true) && !is_dir($logDir)) {
+    respond(false, 'Impossible de préparer le stockage local.', 500);
+}
+
+$logEntry = sprintf(
+    "[%s] %s <%s>\n%s\n-------------------------\n",
+    date('c'),
+    $name,
+    $email,
+    $message
+);
+if (@file_put_contents($logFile, $logEntry, FILE_APPEND) === false) {
+    respond(false, 'Impossible d’enregistrer votre message. Merci de réessayer plus tard.', 500);
+}
+
+$mailSent = false;
+if (function_exists('mail')) {
+    $mailSent = @mail($portfolioEmail, $subject, $body, $formattedHeaders);
+}
+
+$responseMessage = $mailSent
+    ? 'Merci pour votre message ! Je reviens vers vous très vite.'
+    : 'Merci pour votre message ! Je l’ai bien enregistré même si l’envoi de l’email automatique a échoué.';
+
+respond(true, $responseMessage, 200, ['emailSent' => $mailSent]);

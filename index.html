@@ -17,6 +17,7 @@
                     <li><a href="#about" class="active">À propos</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#realisations">Réalisations techniques</a></li>
+                    <li><a href="#skills">Compétences</a></li>
                     <li><a href="#interets">Centres d’intérêt</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -29,58 +30,207 @@
     </header>
     <main>
         <section id="about">
-            <h2>À propos de moi</h2>
-
-            <p>Je m'appelle Farès Mazouz, étudiant en première année de BUT Informatique. Curieux, rigoureux et passionné par les nouvelles technologies, j’ai choisi cette formation pour acquérir des compétences solides en développement, en réseaux et en gestion de données. J’aime relever des défis techniques et apprendre en pratiquant, que ce soit à travers les projets réalisés en cours ou des initiatives personnelles.</p>
-            <p>À terme, je souhaite me spécialiser en cybersécurité ou en développement logiciel, avec l’ambition de travailler dans un environnement stimulant, pourquoi pas dans le secteur du luxe ou de l’innovation. Mon esprit d’équipe, ma persévérance et ma soif d’apprendre sont mes principaux moteurs au quotidien.</p>
-
+            <p class="section-eyebrow">Vision & identité</p>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h2>À propos de moi</h2>
+                    <p>Je m'appelle Farès Mazouz, étudiant en première année de BUT Informatique. Curieux, rigoureux et passionné par les nouvelles technologies, j’explore tout particulièrement l’univers de la cybersécurité à travers des projets académiques, des challenges CTF et une veille constante sur les nouvelles menaces.</p>
+                    <p>À terme, je souhaite me spécialiser en cybersécurité ou en développement logiciel, idéalement dans un environnement d’excellence où la créativité et la précision sont essentielles. Mon esprit d’équipe, ma persévérance et ma soif d’apprendre sont mes principaux moteurs au quotidien.</p>
+                    <ul class="focus-list">
+                        <li>Cybersécurité défensive</li>
+                        <li>Python & automatisation</li>
+                        <li>Gestion de projet agile</li>
+                        <li>UX appliquée au luxe</li>
+                    </ul>
+                    <div class="cta-group">
+                        <a href="assets/cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+                        <a href="contact.html" class="ghost-btn">Planifier un échange</a>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="highlight-card">
+                        <h3>Ce que j'apporte</h3>
+                        <p>Un regard hybride entre cybersécurité et expérience utilisateur inspirée du luxe pour créer des solutions fiables et élégantes.</p>
+                        <ul class="bullet-list">
+                            <li>Veille offensive & défensive hebdomadaire</li>
+                            <li>Scripts Python pour automatiser les audits</li>
+                            <li>Communication claire avec les équipes non-tech</li>
+                        </ul>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">+8</span>
+                            <span class="stat-label">Projets académiques</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">4</span>
+                            <span class="stat-label">Challenges CTF / mois</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">2</span>
+                            <span class="stat-label">Équipes projet pilotées</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="cv">
-            <h2>CV</h2>
-            <a href="assets/cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+            <p class="section-eyebrow">Parcours</p>
+            <h2>CV & expériences marquantes</h2>
+            <p>Mon cursus en BUT Informatique m’offre un terrain d’expérimentation concret pour bâtir des solutions robustes en développement, réseau et bases de données. J’y ajoute une curiosité permanente et l’envie d’apporter une touche premium aux livrables.</p>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-point"></div>
+                    <div>
+                        <p class="timeline-date">2024 - Aujourd'hui</p>
+                        <h3>BUT Informatique - IUT</h3>
+                        <p>Projet tutoré autour de l'IA Hexapawn, modules de cybersécurité, administration système et méthodologie agile.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-point"></div>
+                    <div>
+                        <p class="timeline-date">2023</p>
+                        <h3>Stages & immersions</h3>
+                        <p>Participation à des ateliers de sensibilisation aux cybermenaces et accompagnement à la rédaction de cahiers des charges.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-point"></div>
+                    <div>
+                        <p class="timeline-date">2019 - 2022</p>
+                        <h3>Associatif & sport</h3>
+                        <p>Organisation d’événements sportifs et animation de workshops d’initiation au code pour des lycéens.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="cta-group">
+                <a href="assets/cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+                <a href="experience.html" class="ghost-btn">Découvrir le parcours complet</a>
+            </div>
         </section>
 
         <section id="realisations">
+            <p class="section-eyebrow">Terrain de jeu</p>
             <h2>Réalisations techniques de l’année en cours</h2>
-            <div class="project">
-
-                <h3>L'hexapawn</h3>
-                <p>Ce projet consistait à développer une intelligence artificielle capable de jouer au jeu d’échecs simplifié Hexapawn. Réalisé en équipe, il m’a permis de mettre en pratique la conduite de projet tout en renforçant mes compétences en développement.</p>
-                <div class="project-images">
-                    <img src="assets/images/hexapawn.jpg" alt="Plateau de jeu Hexapawn">
-                </div>
-                <ul>
-                    <li>C1 : développement d’application</li>
-                    <li>C5 : conduite de projet</li>
-
-                    <li>C6 : travail en équipe</li>
-
-                </ul>
-            </div>
-
-            <div class="project">
-
-                <h3>Recueil de besoin pour Wiremap</h3>
-                <p>Rédaction du cahier des charges de l’outil Wiremap destiné à cartographier les réseaux informatiques. Cette étude a impliqué l’analyse des attentes du client, la définition des fonctionnalités clés et la préparation de maquettes.</p>
-                <div class="project-images">
-                    <img src="assets/images/wiremap.jpg" alt="Schéma Wiremap">
-                </div>
-                <ul>
-                    <li>C4 : gestion des données</li>
-                    <li>C5 : conduite de projet</li>
-                </ul>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>L'hexapawn</h3>
+                            <p class="project-subtitle">IA Python · Travail d'équipe</p>
+                        </div>
+                        <span class="project-chip">Automatisation</span>
+                    </div>
+                    <p>Développement d'une intelligence artificielle capable de jouer à Hexapawn en améliorant ses stratégies partie après partie. L’occasion de renforcer la logique algorithmique et la communication au sein de l’équipe.</p>
+                    <ul class="tag-list">
+                        <li>C1 · Développement d’application</li>
+                        <li>C5 · Gestion de projet</li>
+                        <li>C6 · Travail en équipe</li>
+                    </ul>
+                    <a href="projets.html" class="ghost-btn small">Voir le compte-rendu</a>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>Recueil de besoin pour Wiremap</h3>
+                            <p class="project-subtitle">Design fonctionnel · UX</p>
+                        </div>
+                        <span class="project-chip">Cahier des charges</span>
+                    </div>
+                    <p>Analyse des besoins client et formalisation d’un outil de cartographie réseau complet. Création de maquettes, priorisation des fonctionnalités et cadrage des contraintes techniques.</p>
+                    <ul class="tag-list">
+                        <li>C4 · Gestion des données</li>
+                        <li>C5 · Conduite de projet</li>
+                    </ul>
+                    <a href="projets.html" class="ghost-btn small">Explorer le projet</a>
+                </article>
             </div>
         </section>
 
-
+        <section id="skills">
+            <p class="section-eyebrow">Compétences clés</p>
+            <h2>Compétences techniques & humaines</h2>
+            <div class="skill-grid">
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-terminal" aria-hidden="true"></i>
+                        <div>
+                            <h3>Développement Python</h3>
+                            <p>Scripts d’audit, bots et outils pour automatiser les contrôles.</p>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar" data-value="85"></div>
+                        </div>
+                        <span class="progress-value">85%</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <div>
+                            <h3>Cybersécurité</h3>
+                            <p>Veille, CTF et mise en place de plans de réponse aux incidents.</p>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar" data-value="80"></div>
+                        </div>
+                        <span class="progress-value">80%</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        <div>
+                            <h3>Gestion de projet</h3>
+                            <p>Organisation agile, suivi d’indicateurs et communication claire.</p>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar" data-value="75"></div>
+                        </div>
+                        <span class="progress-value">75%</span>
+                    </div>
+                </article>
+            </div>
+            <div class="soft-skill-cloud">
+                <span class="pill">Esprit d’équipe</span>
+                <span class="pill">Curiosité</span>
+                <span class="pill">Communication</span>
+                <span class="pill">Gestion du stress</span>
+            </div>
+        </section>
 
         <section id="interets">
+            <p class="section-eyebrow">En dehors de l'écran</p>
             <h2>Centres d’intérêt et autres éléments personnels</h2>
-            <p>En dehors de mes études, je m’intéresse beaucoup à la cybersécurité, aux CTF (Capture The Flag), et aux outils de pentest que je découvre via des plateformes comme TryHackMe ou Hack The Box.</p>
-            <p>Je suis également passionné par le sport (musculation, boxe) et par la mode, en particulier les marques de luxe. J’aime apprendre en autodidacte, que ce soit pour améliorer mes compétences techniques ou personnelles.</p>
-
-
+            <div class="interest-grid">
+                <article class="interest-card">
+                    <h3>Cybersécurité & CTF</h3>
+                    <p>Participation régulière à TryHackMe et Hack The Box pour tester de nouvelles techniques d’attaque/défense.</p>
+                </article>
+                <article class="interest-card">
+                    <h3>Sport & rigueur</h3>
+                    <p>Musculation et boxe pour entretenir la discipline, la persévérance et l’esprit de compétition.</p>
+                </article>
+                <article class="interest-card">
+                    <h3>Mode & luxe</h3>
+                    <p>Veille sur les maisons de luxe pour m’inspirer des codes esthétiques et les appliquer aux interfaces.</p>
+                </article>
+            </div>
+            <div class="cta-panel">
+                <div>
+                    <h3>Une opportunité ou un défi à me confier ?</h3>
+                    <p>Contactez-moi pour imaginer ensemble une solution élégante et sécurisée.</p>
+                </div>
+                <a href="contact.html" class="download-btn">Accéder à la page contact</a>
+            </div>
         </section>
     </main>
 

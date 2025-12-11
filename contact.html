@@ -29,24 +29,79 @@
         </div>
     </header>
     <main>
-        <section>
-            <h2>Contact</h2>
-            <form id="contact-form" action="contact.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+        <section class="contact-section">
+            <p class="section-eyebrow">Entrons en contact</p>
+            <h2>Imaginons votre prochain projet</h2>
+            <p class="lead">Une question, une mission freelance ou simplement l’envie d’échanger sur la cybersécurité ? Je réponds sous 48h maximum.</p>
+
+            <div class="contact-grid">
+                <div class="contact-column">
+                    <h3>Écrivez-moi directement</h3>
+                    <form id="contact-form" action="contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="vous@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Décrivez votre besoin, votre budget ou vos disponibilités..." required></textarea>
+                        </div>
+                        <button type="submit">Envoyer</button>
+                        <p class="privacy-hint">En cliquant sur “Envoyer”, vous acceptez que je vous réponde par email. Aucune donnée n’est partagée avec des tiers.</p>
+                        <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                <div class="contact-column contact-info">
+                    <div class="info-card">
+                        <h3>Coordonnées directes</h3>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot" aria-hidden="true"></i>
+                            <div>
+                                <p class="info-label">Basé à</p>
+                                <p>Paris & Grenoble</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <p class="info-label">Email</p>
+                                <a href="mailto:faresmzz15@gmail.com">faresmzz15@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <p class="info-label">Téléphone</p>
+                                <a href="tel:+33000000000">+33 6 00 00 00 00</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card contact-highlights">
+                        <h3>Disponibilités</h3>
+                        <ul class="bullet-list">
+                            <li>Réponse sous 48h ouvrées</li>
+                            <li>RDV visio ou café sur Paris</li>
+                            <li>Collaboration freelance ou stage</li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
-                </div>
-                <button type="submit">Envoyer</button>
-                <div id="form-message" class="form-message"></div>
-            </form>
+            </div>
         </section>
     </main>
     <button id="scrollTopButton" class="scroll-top" aria-label="Retour en haut">↑</button>
